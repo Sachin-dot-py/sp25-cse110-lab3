@@ -5,6 +5,12 @@
     <title>Meeting Minutes</title>
     <meta charset="UTF-8">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        header{
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
@@ -87,7 +93,7 @@
         </section>
         <section id="randomform">
             <form>
-                <fieldset>
+                <fieldset id="first-fieldset">
                     Enter your name: <input type="text" name="name"><br>
                     Email: <input type="text" name="contact" value="test@test.com"> <br>
                     Pick your favourite colour:
@@ -117,11 +123,11 @@
                     <input type="checkbox" name="subscribe" value="yes"> Subscribe to our newsletter<br>
                     Contact me <input type="radio" name="contact"> yes <input type="radio" name="contact"> no<br>
                 </fieldset>
-                <button type="submit">Submit</button>
+                <button type="submit" class="demo-class">Submit</button>
             </form>
         </section>
     </main>
-    <footer>
+    <footer style="display: none;">
         Created by Sachin Ramanathan.
     </footer>
 </body>
