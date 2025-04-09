@@ -1,0 +1,207 @@
+/* Global styles */
+
+:root {
+    --main-bg-color: #f0f0f0; /* Define a CSS variable */
+}
+
+*{
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
+}
+
+body {
+    /* Using a relative unit (rem) for the base font size */
+    font-size: 1rem;
+    /* Using a relative unit (%) for horizontal margins (centers the content) */
+    margin: 5% auto;
+    /* Adding padding with an absolute unit (px) for precise control */
+    padding: 20px;
+    line-height: 1.5;
+    background-color: var(--main-bg-color, lightgray);
+}
+
+/* Section styling */
+section {
+    /* Using a relative unit (em) for spacing inside sections */
+    padding: 1em;
+    /* Using an absolute unit (cm) to create an unusual, but demonstrative, gap between sections */
+    margin-bottom: 1cm;
+    border-radius: 5px; 
+    border-style: dashed;
+    border-color: chocolate;
+    border-width: 2px;
+}
+
+footer {
+    /* Using a relative unit (vh) for the footer height */
+    height: 10vh;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    text-decoration: underline;
+    font-size: 0.8em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+a {
+    color: greenyellow;
+}
+
+/* Styling for Headings */
+h1 {
+    color: #0000ff;
+    position: sticky;
+
+}
+
+h2 {
+    color: rgb(100, 100, 255);
+}
+
+h3 {
+    color: hsl(100, 50%, 50%);
+}
+
+/* Styling for Paragraphs */
+
+p {
+    color: color(display-p3 1 0.5 0 / 0.8);
+}
+
+/* Styling for Lists */
+
+ul {
+    color: color-mix(in srgb, blue 70%, green 30%);
+    margin: auto;
+}
+
+ol {
+    color: color-mix(in srgb, red 50%, blue 50%);
+    margin: auto;
+}
+
+/* Styling for Images */
+img {
+    border: 2px solid goldenrod;
+    padding: 5px 5px 5px 5px;
+    margin: 5px 5px 5px 5px;
+}
+
+
+/* Effects */
+
+a:hover {
+    color: #d00;
+  }
+  
+button:active {
+    transform: scale(0.95);
+}
+
+section:has(img) {
+    border: 3px dashed orange;
+}
+  
+.container {
+    background: #fff;
+
+    & h1 {
+      color: teal;
+      margin-bottom: 1rem;
+    }
+}
+
+/* Adjacent Sibling Combinator: style any <ul> immediately following a <p> */
+p + ul {
+    margin-top: 0.5rem;
+}
+  
+/* Combining Two Selectors: an element with a class */
+button.demo-class {
+    border: 2px solid green;
+}
+
+
+/* Descendant Combinator: style <p> inside any <nav> */
+nav p {
+    font-style: italic;
+  }
+  
+/* Child Combinator: style direct <h2> children of <section> */
+section > h2 {
+    color: blue;
+}
+
+/* General Sibling Combinator: style any <p> that follows an <h2> */
+h2 ~ p {
+    color: gray;
+}
+
+
+/* Class Selector */
+.demo-class {
+    padding: 10px;
+    height: 50px;      
+    width: 60px;       
+    max-width: 90%;      
+    min-width: 10rem;    
+}
+  
+/* ID Selector */
+#randomform {
+    margin: 1rem;
+    position: relative;
+}
+
+#first-fieldset{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-self: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+form{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+  
+  /* Attribute Selector */
+  input[type="text"] {
+    border: 1px solid #bbb;
+  }
+  
+  /* Selector List */
+  h1, h2 {
+    font-weight: bold;
+  }
+  
+/* ---------- Responsiveness: Media Query ---------- */
+@media (max-width: 600px) {
+    body {
+      font-size: 0.9rem; /* Adjusts text size on smaller screens */
+    }
+  }
+  
+  /* ---------- Fonts ---------- */
+  /* Import a Google Font and apply it globally */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
